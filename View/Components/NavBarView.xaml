@@ -49,7 +49,7 @@
         <telerik:RadToolBarSeparator />
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="8,0">
-            <TextBlock Text="From:" VerticalAlignment="Center" Margin="0,0,6,0" />
+            <TextBlock Text="С:" VerticalAlignment="Center" Margin="0,0,6,0" />
             <telerik:RadDatePicker SelectedValue="{Binding StartDate, Mode=TwoWay}"
                                   SelectableDateEnd="{Binding EndDate}"
                                   DateTimeWatermarkContent="dd.MM.yyyy"
@@ -61,7 +61,7 @@
                 </telerik:RadDatePicker.Culture>
             </telerik:RadDatePicker>
 
-            <TextBlock Text="To:" VerticalAlignment="Center" Margin="0,0,6,0" />
+            <TextBlock Text="По:" VerticalAlignment="Center" Margin="0,0,6,0" />
             <telerik:RadDatePicker SelectedValue="{Binding EndDate, Mode=TwoWay}"
                                   SelectableDateStart="{Binding StartDate}"
                                   DateTimeWatermarkContent="dd.MM.yyyy"

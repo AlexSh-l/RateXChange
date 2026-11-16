@@ -15,13 +15,13 @@
                      ShowGroupPanel="False"
                      RowIndicatorVisibility="Collapsed">
         <telerik:RadGridView.Columns>
-            <telerik:GridViewDataColumn Header="Date"
+            <telerik:GridViewDataColumn Header="Дата"
                                     DataMemberBinding="{Binding Date, Mode=OneWay, StringFormat=dd.MM.yyyy}"
                                     DataFormatString="dd.MM.yyyy"
                                     IsReadOnly="True"
                                     Width="*" />
 
-            <telerik:GridViewDataColumn Header="Rate"
+            <telerik:GridViewDataColumn Header="Курс"
                                     DataMemberBinding="{Binding Rate, Mode=TwoWay}"
                                     DataFormatString="{}{0:N4}"
                                     Width="*" />
