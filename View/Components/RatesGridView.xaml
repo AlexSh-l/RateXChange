@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="RateXChange.View.Components.RatesGridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RateXChange.View.Components"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <telerik:RadGridView HorizontalAlignment="Stretch"
+                     ItemsSource="{Binding ChartData}"
+                     AutoGenerateColumns="False"
+                     CanUserInsertRows="False"
+                     CanUserDeleteRows="False"
+                     ShowGroupPanel="False"
+                     RowIndicatorVisibility="Collapsed">
+        <telerik:RadGridView.Columns>
+            <telerik:GridViewDataColumn Header="Date"
+                                    DataMemberBinding="{Binding Date, Mode=OneWay, StringFormat=dd.MM.yyyy}"
+                                    DataFormatString="dd.MM.yyyy"
+                                    IsReadOnly="True"
+                                    Width="*" />
+
+            <telerik:GridViewDataColumn Header="Rate"
+                                    DataMemberBinding="{Binding Rate, Mode=TwoWay}"
+                                    DataFormatString="{}{0:N4}"
+                                    Width="*" />
+        </telerik:RadGridView.Columns>
+    </telerik:RadGridView>
+</UserControl>
